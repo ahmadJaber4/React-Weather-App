@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/weather-icon.webp'
 import './Header.css';
 
@@ -10,9 +11,9 @@ export default function Header(){
             </div>
 
             <div className='tabs'>
-                <div className='tab'>Home</div>
-                <div className='tab'>Browse</div>
-                <div className='tab'>Saved</div>
+                <NavLink to='/' className='tab'>Home</NavLink>
+                <NavLink to='/browse' className='tab'>Browse</NavLink>
+                <NavLink to='/saved' className='tab'>Saved</NavLink>
             </div>
         </header>
     );

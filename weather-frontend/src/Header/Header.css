@@ -30,14 +30,22 @@
     gap: 25px;
     justify-self: center;
     font-weight: normal;
+    font-weight: 500;
 }
 
 .tab{
     cursor: pointer;
+    color: white;
+    text-decoration: none;
+
 }
 
 .tab:hover{
-    color: lightblue;
+    color: rgb(196, 224, 255);
+}
+
+.active{
+    color: rgb(196, 224, 255);
 }
 
 /* Tablet screens */
