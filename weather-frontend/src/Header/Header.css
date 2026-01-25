@@ -51,8 +51,12 @@
 /* Tablet screens */
 @media (max-width: 768px) {
     .header {
-        height: 45px;
-        font-size: 0.85em;
+        height: 75px;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
     }
 
     .logo {
