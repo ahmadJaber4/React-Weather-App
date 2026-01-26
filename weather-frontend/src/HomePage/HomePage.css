@@ -14,6 +14,7 @@
     color: white;
     font-family: 'Roboto';
     padding-left: 100px;
+    border-bottom: 1px solid black;
 }
 
 .name-and-general {
@@ -41,10 +42,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
     opacity: 0.8;
     background-color: rgba(22, 22, 22, 0.734);
     border-radius: 10px;
-    padding: 0 15px;
+    padding: 5px 15px;
 }
 
 .info {
@@ -58,4 +60,16 @@
 
 i {
     margin-right: 10px;
+}
+
+.message{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.4em;
+    border-bottom: 1px solid black;
+
 }

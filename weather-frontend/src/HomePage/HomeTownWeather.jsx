@@ -26,6 +26,10 @@ export default function HomeTownWeather({ homeTownWeather, cityImage }) {
                                 <i className="fa-solid fa-wind fa-xl"></i>
                                 {homeTownWeather.current.wind_kph} km/h
                             </div>
+                            <div className="info">
+                                <i className="fa-solid fa-droplet fa-xl"></i>
+                                {homeTownWeather.current.humidity}%
+                            </div>
                         </div>
                     </div>
                 </>
