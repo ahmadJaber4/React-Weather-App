@@ -2,7 +2,7 @@
     height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
     background-position: center;
@@ -13,17 +13,18 @@
     background-blend-mode: multiply;
     color: white;
     font-family: 'Roboto';
-    padding-left: 100px;
     border-bottom: 1px solid black;
 }
 
-.name-and-current {
+.name-and-current-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     text-shadow: 0 0 10px black;
+    padding-left: 100px;
+    margin-top: 80px;
     /*background-color: rgba(22, 22, 22, 0.333);
     border-radius: 10px;
     padding: 10px;
@@ -63,7 +64,7 @@ i {
     margin-right: 10px;
 }
 
-.message{
+.message {
     height: 550px;
     display: flex;
     justify-content: center;
@@ -72,5 +73,135 @@ i {
     font-family: 'Roboto';
     font-size: 1.4em;
     border-bottom: 1px solid black;
+}
 
+.future-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: default;
+}
+
+.today-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 45%;
+    overflow: hidden;
+}
+
+.today-text {
+    margin: 10px 20px;
+    font-size: 1.15em;
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.upcoming-hours-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+    background-color: rgba(22, 22, 22, 0.734);
+    border-top-right-radius: 10px;
+    opacity: 0.9;
+    overflow-x: auto;
+}
+
+.hour-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.wind-humidity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.upcoming-container {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.upcoming-days-text {
+    margin: 10px 20px;
+    font-size: 1.15em;
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.upcoming-days-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+    background-color: rgba(22, 22, 22, 0.734);
+    border-top-left-radius: 10px;
+    opacity: 0.9;
+    overflow-x: auto;
+}
+
+.day-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.sunrise-sunset {
+    display: flex;
+    gap: 15px;
+    opacity: 0.8;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.sunrise-sunset img {
+    width: 25px;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: rgb(13, 113, 200);
+  border-radius: 0px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
