@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import Header from "../Header/Header";
+import Header from "../MainComponents/Header";
 import HomeTownWeather from './HomeTownWeather';
+import WebsiteBrief from './WebsiteBrief';
+import Footer from '../MainComponents/Footer';
 import placeHolderImage from '../assets/image-placeholder.webp';
 import './HomePage.css';
-import WebsiteBrief from './WebsiteBrief';
 
 export default function HomePage() {
     const [homeTownWeather, setHomeTownWeather] = useState();
@@ -85,6 +86,7 @@ export default function HomePage() {
                 <>
                     <HomeTownWeather homeTownWeather={homeTownWeather} cityImage={cityImage} />
                     <WebsiteBrief />
+                    <Footer/>
                 </>
             }
         </>

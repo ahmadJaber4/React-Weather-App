@@ -192,6 +192,7 @@ i {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .brief-box {
@@ -233,6 +234,11 @@ i {
     text-align: center;
     font-size: 1.1em;
     opacity: 0.9;
+}
+
+.brief-link{
+    color: white;
+    font-weight: bold;
 }
 
 /* Width */

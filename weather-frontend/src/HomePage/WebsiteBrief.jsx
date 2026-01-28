@@ -14,11 +14,11 @@ export default function WebsiteBrief() {
             <BriefBox
                 image="🌍"
                 title="Global Weather Data"
-                description={<>Use the <Link to="browse">Browse</Link> page to find weather for any city around the world. See current conditions and forecasts, so you always have reliable weather information for any location you choose.</>} />
+                description={<>Use the <Link to="browse" className="brief-link">Browse</Link> page to find weather for any city around the world. See current conditions and forecasts, so you always have reliable weather information for any location you choose.</>} />
             <BriefBox
                 image="🗂️"
                 title="Save Any Location You Want"
-                description={<>Keep track of places that matter to you by saving them. Easily check weather conditions and forecasts for your saved locations anytime in the <Link to="saved">Saved</Link> tab.</>} />
+                description={<>Keep track of places that matter to you by saving them. Easily check weather conditions and forecasts for your saved locations anytime in the <Link to="saved" className="brief-link">Saved</Link> tab.</>} />
             <BriefBox
                 image="🤖"
                 title="AI Features"

@@ -4,8 +4,8 @@ import './Header.css';
 
 export default function Header(){
     return (
-        <header className="header">
-            <div className='logo-and-title'>
+        <header className='header'>
+            <div className='header-logo-and-title'>
                 <img className="logo" src={logo} alt="logo" />
                 <span className="title">Jaber's Weather Forecast</span>
             </div>
