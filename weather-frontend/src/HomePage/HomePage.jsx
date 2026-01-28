@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import HomeTownWeather from './HomeTownWeather';
 import placeHolderImage from '../assets/image-placeholder.webp';
 import './HomePage.css';
+import WebsiteBrief from './WebsiteBrief';
 
 export default function HomePage() {
     const [homeTownWeather, setHomeTownWeather] = useState();
@@ -35,13 +36,13 @@ export default function HomePage() {
                 async (position) => {
                     setRequestingLocation(false);
                     const { latitude, longitude } = position.coords;
-                    try{
+                    try {
                         await getLocation(latitude, longitude);
                     }
-                    catch(err){
+                    catch (err) {
                         setError(err.message);
                     }
-                    finally{
+                    finally {
                         setLoading(false);
                     }
                 },
@@ -60,10 +61,10 @@ export default function HomePage() {
     useEffect(() => {
         const loadImage = async () => {
             if (homeTownWeather) {
-                try{
+                try {
                     await getImage(homeTownWeather.location.name);
                 }
-                catch(err){
+                catch (err) {
                     setCityImage(placeHolderImage)
                 }
             }
@@ -80,9 +81,11 @@ export default function HomePage() {
             {requestingLocation && <div className='message'>Waiting for location access...</div>}
             {loading && !requestingLocation && <div className='message'>Loading data...</div>}
             {error && <div className='message'>Error: {error}</div>}
-            {/* {imageError && <div className='message'><img src={placeHolderImage}/></div>} */}
-            {!loading && !error && 
-            <HomeTownWeather homeTownWeather={homeTownWeather} cityImage={cityImage} />
+            {!loading && !error &&
+                <>
+                    <HomeTownWeather homeTownWeather={homeTownWeather} cityImage={cityImage} />
+                    <WebsiteBrief />
+                </>
             }
         </>
     );
