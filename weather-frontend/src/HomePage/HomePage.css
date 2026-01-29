@@ -1,5 +1,5 @@
 .home-town-container {
-    height: 550px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,7 @@
     align-items: center;
     gap: 30px;
     text-shadow: 0 0 10px black;
-    padding-left: 100px;
+    margin-left: 75px;
     margin-top: 80px;
     /*background-color: rgba(22, 22, 22, 0.333);
     border-radius: 10px;
@@ -66,7 +66,7 @@ i {
 }
 
 .message {
-    height: 550px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +74,7 @@ i {
     font-family: 'Roboto';
     font-size: 1.4em;
     border-bottom: 1px solid black;
+    margin-bottom: 50px;
 }
 
 .future-data {
@@ -156,7 +157,6 @@ i {
     border-top-left-radius: 10px;
     opacity: 0.9;
     overflow-x: auto;
-    width: 100%;
 }
 
 .day-data {
@@ -205,13 +205,14 @@ i {
     color: white;
     background-color: rgb(13, 113, 200);
     width: 350px;
-    height: 270px;
+    height: 280px;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.6),
         0 8px 12px rgba(0, 0, 0, 0.4);
+    overflow: auto;
     transition: 0.25s ease;
 }
 

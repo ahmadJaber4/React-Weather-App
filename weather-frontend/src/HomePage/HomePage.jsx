@@ -83,12 +83,10 @@ export default function HomePage() {
             {loading && !requestingLocation && <div className='message'>Loading data...</div>}
             {error && <div className='message'>Error: {error}</div>}
             {!loading && !error &&
-                <>
-                    <HomeTownWeather homeTownWeather={homeTownWeather} cityImage={cityImage} />
-                    <WebsiteBrief />
-                    <Footer/>
-                </>
+                <HomeTownWeather homeTownWeather={homeTownWeather} cityImage={cityImage} />
             }
+            <WebsiteBrief />
+            <Footer/>
         </>
     );
 }
