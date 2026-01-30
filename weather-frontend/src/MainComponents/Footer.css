@@ -9,13 +9,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.221);
 }
 
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .name-and-copyright {
     display: flex;
     flex-direction: column;
@@ -50,4 +43,30 @@ h2 {
 
 a {
     color: white;
+}
+
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h4{
+        font-size: 0.8em;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+
+    .copyright{
+        font-size: 0.7em;
+    }
+
+    .sources{
+        font-size: 0.8em;
+    }
 }

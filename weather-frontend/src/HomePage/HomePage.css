@@ -17,12 +17,6 @@
     margin-bottom: 50px;
 }
 
-.local-info-and-summarize{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .name-and-current-data {
     display: flex;
     flex-direction: column;
@@ -32,10 +26,6 @@
     text-shadow: 0 0 10px black;
     margin-left: 75px;
     margin-top: 80px;
-    /*background-color: rgba(22, 22, 22, 0.333);
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 15px;*/
 }
 
 .city-country {
@@ -222,7 +212,7 @@ i {
     transition: 0.25s ease;
 }
 
-.brief-box:hover{
+.brief-box:hover {
     transform: scale(1.03);
 }
 
@@ -243,7 +233,7 @@ i {
     opacity: 0.9;
 }
 
-.brief-link{
+.brief-link {
     color: white;
     font-weight: bold;
 }
@@ -272,4 +262,117 @@ i {
 .upcoming-hours-data::-webkit-scrollbar-thumb:hover,
 .upcoming-days-data::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media (max-width: 1024px) {
+    .home-town-container {
+        height: 600px;
+        align-items: center;
+    }
+
+    .name-and-current-data {
+        margin: 0;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .home-town-container {
+        height: 600px;
+        align-items: center;
+    }
+
+    .name-and-current-data {
+        margin: 0;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .city-country {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5em;
+    }
+
+    .current-weather {
+        gap: 25px;
+        font-size: 0.8em;
+    }
+
+    .state-icon {
+        width: 30px;
+    }
+
+    .message {
+        height: 500px;
+    }
+
+    .future-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .today-container {
+        width: 100%;
+    }
+
+    .today-text {
+        font-size: 0.9em;
+    }
+
+    .upcoming-hours-data {
+        font-size: 0.8em;
+    }
+
+    .hour-data {
+        gap: 5px;
+    }
+
+    .upcoming-container {
+        width: 100%;
+    }
+
+    .upcoming-days-text {
+        font-size: 0.9em;
+    }
+
+    .upcoming-days-data {
+        font-size: 0.8em;
+    }
+
+    .day-data {
+        gap: 5px;
+    }
+
+    .sunrise-sunset {
+        display: flex;
+        gap: 10px;
+        opacity: 0.8;
+    }
+
+    .sunrise,
+    .sunset {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7em;
+    }
+
+    .sunrise-sunset img {
+        width: 25px;
+    }
+
+    .brief-box {
+        width: 80%;
+        font-size: 0.9em;
+        height: 250px;
+    }
+
 }

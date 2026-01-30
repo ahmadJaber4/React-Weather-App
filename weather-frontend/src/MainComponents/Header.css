@@ -29,7 +29,6 @@
     display: flex;
     gap: 25px;
     justify-self: center;
-    font-weight: normal;
     font-weight: 500;
 }
 
@@ -48,33 +47,10 @@
     color: rgb(196, 224, 255);
 }
 
-/* Tablet screens */
-@media (max-width: 768px) {
-    .header {
-        height: 75px;
-        font-size: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .logo {
-        width: 40px;
-    }
-
-    .logo-and-title {
-        margin-left: 10px;
-    }
-
-    .tabs {
-        gap: 15px;
-    }
-}
-
 /* Mobile screens */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .header {
+        align-items: center;
         height: 40px;
         font-size: 0.85em;
     }
@@ -83,12 +59,12 @@
         width: 35px;
     }
 
-    .logo-and-title {
-        margin-left: 5px;
-        gap: 5px;
+    .title{
+        display: none;
     }
 
     .tabs {
         gap: 10px;
+        font-size: 1.3em;
     }
 }
