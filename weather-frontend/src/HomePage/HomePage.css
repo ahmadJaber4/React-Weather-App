@@ -17,6 +17,12 @@
     margin-bottom: 50px;
 }
 
+.local-info-and-summarize{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .name-and-current-data {
     display: flex;
     flex-direction: column;

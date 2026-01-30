@@ -4,7 +4,6 @@ import BriefBox from "./BriefBox";
 
 
 export default function WebsiteBrief() {
-    console.log(weatherFacts);
     return (
         <div className="website-brief-container">
             <BriefBox
@@ -19,10 +18,6 @@ export default function WebsiteBrief() {
                 image="🗂️"
                 title="Save Any Location You Want"
                 description={<>Keep track of places that matter to you by saving them. Easily check weather conditions and forecasts for your saved locations anytime in the <Link to="saved" className="brief-link">Saved</Link> tab.</>} />
-            <BriefBox
-                image="🤖"
-                title="AI Features"
-                description="" />
             <BriefBox
                 image="💡"
                 title="Random Fact"
