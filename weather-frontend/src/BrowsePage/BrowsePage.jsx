@@ -1,5 +1,5 @@
 import Header from "../MainComponents/Header";
-import { famousCities } from "../suggestedPlaces";
+import SuggestedCities from "./SuggestedCities";
 import './BrowsePage.css';
 
 
@@ -15,9 +15,7 @@ export default function BrowsePage(){
                 <input type="text" placeholder="Search a city" className="search-input"/>
             </div>
 
-            <div className="suggested-container">
-                <h3 className="suggested-text">Suggested Places</h3>
-            </div>
+            <SuggestedCities/>
         </>
     );
 }
