@@ -6,6 +6,7 @@ import WebsiteBrief from './WebsiteBrief';
 import Footer from '../MainComponents/Footer';
 import placeHolderImage from '../assets/image-placeholder.webp';
 import './HomePage.css';
+import '../weather.css';
 
 export default function HomePage() {
     const [homeTownWeather, setHomeTownWeather] = useState();

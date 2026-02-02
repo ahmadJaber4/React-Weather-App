@@ -1,7 +1,7 @@
 import Header from "../MainComponents/Header";
 import SuggestedCities from "./SuggestedCities";
 import './BrowsePage.css';
-
+import '../weather.css';
 
 export default function BrowsePage(){
     return(

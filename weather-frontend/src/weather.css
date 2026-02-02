@@ -1,0 +1,135 @@
+.info {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.state-icon {
+    width: 50px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.message {
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.4em;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+
+.future-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: default;
+}
+
+.today-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+    overflow: hidden;
+}
+
+.today-text {
+    margin: 10px 20px;
+    font-size: 1.15em;
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.upcoming-hours-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+    background-color: rgba(22, 22, 22, 0.734);
+    border-top-right-radius: 10px;
+    opacity: 0.9;
+    overflow-x: auto;
+    width: 97%;
+}
+
+.hour-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.wind-humidity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.upcoming-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.upcoming-days-text {
+    margin: 10px 20px;
+    font-size: 1.15em;
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.upcoming-days-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+    background-color: rgba(22, 22, 22, 0.734);
+    border-top-left-radius: 10px;
+    opacity: 0.9;
+    overflow-x: auto;
+}
+
+.day-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.sunrise-sunset {
+    display: flex;
+    gap: 15px;
+    opacity: 0.8;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.sunrise-sunset img {
+    width: 25px;
+}
