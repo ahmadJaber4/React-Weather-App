@@ -1,5 +1,6 @@
 import Header from "../MainComponents/Header";
 import SuggestedCities from "./SuggestedCities";
+import Footer from "../MainComponents/Footer";
 import './BrowsePage.css';
 import '../weather.css';
 
@@ -16,6 +17,8 @@ export default function BrowsePage(){
             </div>
 
             <SuggestedCities/>
+
+            <Footer/>
         </>
     );
 }

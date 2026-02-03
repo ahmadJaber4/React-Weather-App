@@ -13,6 +13,7 @@ i {
 }
 
 .city-box {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +29,6 @@ i {
         0 4px 6px rgba(0, 0, 0, 0.6),
         0 8px 12px rgba(0, 0, 0, 0.4);
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     width: 1000px;
     height: 360px;
     width: 85%;
@@ -173,6 +173,25 @@ i {
 
 .sunrise-sunset img {
     width: 25px;
+}
+
+.save-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    background-color: rgb(13, 113, 200);
+    color: white;
+    border: none;
+    border-bottom-left-radius: 10px;
+    box-shadow: -1.5px 1.5px 5px black;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.save-button:hover{
+    background: rgb(16, 97, 167);
 }
 
 /* Width */
