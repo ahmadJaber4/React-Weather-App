@@ -108,32 +108,6 @@
     font-weight: bold;
 }
 
-/* Width */
-.upcoming-hours-data::-webkit-scrollbar,
-.upcoming-days-data::-webkit-scrollbar {
-    width: 12px;
-    height: 9px;
-}
-
-/* Track */
-.upcoming-hours-data::-webkit-scrollbar-track,
-.upcoming-days-data::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Thumb */
-.upcoming-hours-data::-webkit-scrollbar-thumb,
-.upcoming-days-data::-webkit-scrollbar-thumb {
-    background: rgb(13, 113, 200);
-    border-radius: 0px;
-}
-
-/* Hover */
-.upcoming-hours-data::-webkit-scrollbar-thumb:hover,
-.upcoming-days-data::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
 @media (max-width: 1024px) {
     .home-town-container {
         height: 600px;

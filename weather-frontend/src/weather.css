@@ -12,6 +12,59 @@ i {
     margin-right: 10px;
 }
 
+.city-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(31, 58, 84, 0.47);
+    background-blend-mode: multiply;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.6),
+        0 8px 12px rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 1000px;
+    height: 360px;
+    width: 85%;
+    margin-bottom: 25px;
+    border: 1px solid black;
+}
+
+.name-and-current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.city-country {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px black;
+    margin-top: 20px;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    opacity: 0.9;
+    background-color: rgba(22, 22, 22, 0.734);
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
 .future-data {
     width: 100%;
     display: flex;
@@ -120,4 +173,30 @@ i {
 
 .sunrise-sunset img {
     width: 25px;
+}
+
+/* Width */
+.upcoming-hours-data::-webkit-scrollbar,
+.upcoming-days-data::-webkit-scrollbar {
+    width: 12px;
+    height: 9px;
+}
+
+/* Track */
+.upcoming-hours-data::-webkit-scrollbar-track,
+.upcoming-days-data::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Thumb */
+.upcoming-hours-data::-webkit-scrollbar-thumb,
+.upcoming-days-data::-webkit-scrollbar-thumb {
+    background: rgb(13, 113, 200);
+    border-radius: 0px;
+}
+
+/* Hover */
+.upcoming-hours-data::-webkit-scrollbar-thumb:hover,
+.upcoming-days-data::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

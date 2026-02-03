@@ -78,7 +78,7 @@ export default function SuggestedCities() {
 
             {suggestedCitiesWeather.map((city, index) => {
                 return (
-                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]}/>
+                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]} />
                 );
             })}
         </div>

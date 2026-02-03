@@ -1,9 +1,9 @@
 
 export default function SuggestedCurrentWeather({city}) {
     return (
-        <div className='suggested-name-and-current'>
-            <div className='suggested-city-country'>{city.location.name}, {city.location.country}</div>
-            <div className='suggested-current-weather'>
+        <div className='name-and-current'>
+            <div className='city-country'>{city.location.name}, {city.location.country}</div>
+            <div className='current-weather'>
                 <div className="info">
                     <img className="state-icon" src={city.current.condition.icon} alt="" />
                     {city.current.condition.text}
