@@ -1,10 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { famousCities } from "../famousCities";
-import { getUpcomingDaysData, getUpcomingHoursData } from '../utils';
 import placeHolderImage from '../assets/image-placeholder.webp';
-import SuggestedCurrentWeather from './SuggestedCurrentWeather';
-import SuggestedFutureWeather from './SuggestedFutureWeather';
+import CityBox from '../CityBox';
 
 export default function SuggestedCities() {
     const [suggestedCitiesWeather, setSuggestedCitiesWeather] = useState([]);
@@ -80,10 +78,7 @@ export default function SuggestedCities() {
 
             {suggestedCitiesWeather.map((city, index) => {
                 return (
-                    <div key={city.location.name} className='suggested-city-box' style={{ backgroundImage: `url(${suggestedCitiesImages[index]})` }}>
-                        <SuggestedCurrentWeather city={city}/>
-                        <SuggestedFutureWeather city={city}/>
-                    </div>
+                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]}/>
                 );
             })}
         </div>

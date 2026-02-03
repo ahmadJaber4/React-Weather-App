@@ -1,4 +1,4 @@
-import { getUpcomingHoursData } from "../utils";
+import { getUpcomingHoursData } from "./utils";
 
 export default function SuggestedToday({city}) {
     const upcomingHoursData = getUpcomingHoursData(city);

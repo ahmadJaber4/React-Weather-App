@@ -1,4 +1,4 @@
-import { getUpcomingDaysData } from "../utils";
+import { getUpcomingDaysData } from "./utils";
 
 export default function SuggestedUpcomingDays({city}) {
     const upcomingDaysData = getUpcomingDaysData(city);
