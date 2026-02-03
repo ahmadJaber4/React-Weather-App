@@ -1,13 +1,9 @@
-import { useContext } from "react";
-import { LocalWeatherCtx } from "./HomeTownWeather";
 import { getUpcomingHoursData } from "../utils";
 
-export default function Today() {
-    const homeTownWeather = useContext(LocalWeatherCtx);
-    const upcomingHoursData = getUpcomingHoursData(homeTownWeather);
-
+export default function SuggestedToday({city}) {
+    const upcomingHoursData = getUpcomingHoursData(city);
     return (
-        <div className="today-container">
+        <div className='today-container'>
             <p className="today-text">Today</p>
             <div className="upcoming-hours-data">
                 {upcomingHoursData.map((hour) => {
@@ -16,10 +12,6 @@ export default function Today() {
                             <span style={{ fontWeight: "600" }}>{(hour.time).slice(-5)}</span>
                             <img src={hour.condition.icon} alt="" />
                             <span title='Temperature'>{hour.temp_c} &deg;C</span>
-                            <div className='wind-humidity'>
-                                <span><i className="fa-solid fa-wind fa-sm"></i>{hour.wind_mph} km/h</span>
-                                <span><i className="fa-solid fa-droplet fa-sm" style={{ color: "rgb(77, 204, 255)" }}></i>{hour.humidity}%</span>
-                            </div>
                         </div>
                     )
                 })}

@@ -1,11 +1,12 @@
 import { useContext } from 'react';
+import { LocalWeatherCtx } from "./HomeTownWeather";
+import { getUpcomingDaysData } from '../utils';
 import sunsetIcon from '../assets/sunset.png';
 import sunriseIcon from '../assets/sunrise.png';
-import { LocalWeatherCtx } from "./HomeTownWeather";
 
 export default function UpcomingDays() {
     const homeTownWeather = useContext(LocalWeatherCtx);
-    let upcomingDaysData = homeTownWeather ? homeTownWeather.forecast.forecastday.slice(1) : [];
+    let upcomingDaysData = getUpcomingDaysData(homeTownWeather);
 
     return (
         <div className="upcoming-container">

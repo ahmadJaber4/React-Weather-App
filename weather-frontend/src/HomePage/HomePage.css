@@ -47,15 +47,10 @@
 }
 
 .message {
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Roboto';
     font-size: 1.4em;
-    border-bottom: 1px solid black;
-    margin-bottom: 50px;
+    margin: auto auto;
 }
 
 .website-brief-container {

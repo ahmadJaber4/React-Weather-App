@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { famousCities } from "../famousCities";
 import { getUpcomingDaysData, getUpcomingHoursData } from '../utils';
 import placeHolderImage from '../assets/image-placeholder.webp';
+import SuggestedCurrentWeather from './SuggestedCurrentWeather';
+import SuggestedFutureWeather from './SuggestedFutureWeather';
 
 export default function SuggestedCities() {
     const [suggestedCitiesWeather, setSuggestedCitiesWeather] = useState([]);
@@ -77,64 +79,10 @@ export default function SuggestedCities() {
             <h3 className="suggested-text">Famous Cities Across The World</h3>
 
             {suggestedCitiesWeather.map((city, index) => {
-                const upcomingHoursData = getUpcomingHoursData(city);
-                const upcomingDaysData = getUpcomingDaysData(city);
-
                 return (
                     <div key={city.location.name} className='suggested-city-box' style={{ backgroundImage: `url(${suggestedCitiesImages[index]})` }}>
-                        <div className='suggested-name-and-current'>
-                            <div className='suggested-city-country'>{city.location.name}, {city.location.country}</div>
-                            <div className='suggested-current-weather'>
-                                <div className="info">
-                                    <img className="state-icon" src={city.current.condition.icon} alt="" />
-                                    {city.current.condition.text}
-                                </div>
-                                <div className="info" title="Temperature">
-                                    <i className="fa-solid fa-temperature-half fa-xl" style={{ color: "rgb(255, 193, 188)" }}></i>
-                                    {city.current.temp_c} &deg;C
-                                </div>
-                                <div className="info" title="Wind speed">
-                                    <i className="fa-solid fa-wind fa-xl"></i>
-                                    {city.current.wind_kph} km/h
-                                </div>
-                                <div className="info" title="Humidity">
-                                    <i className="fa-solid fa-droplet fa-xl" style={{ color: "rgb(77, 204, 255)" }}></i>
-                                    {city.current.humidity}%
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='future-data'>
-                            <div className='today-container'>
-                                <p className="today-text">Today</p>
-                                <div className="upcoming-hours-data">
-                                    {upcomingHoursData.map((hour) => {
-                                        return (
-                                            <div key={hour.time} className="hour-data">
-                                                <span style={{ fontWeight: "600" }}>{(hour.time).slice(-5)}</span>
-                                                <img src={hour.condition.icon} alt="" />
-                                                <span title='Temperature'>{hour.temp_c} &deg;C</span>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-
-                            <div className='upcoming-container'>
-                                <p className="upcoming-days-text">6-Day Forecast</p>
-                                <div className="upcoming-days-data">
-                                    {upcomingDaysData.map((day) => {
-                                        return (
-                                            <div key={day.date} className="day-data">
-                                                <span style={{ fontWeight: "600" }}>{day.date}</span>
-                                                <img src={day.day.condition.icon} alt="" />
-                                                <span style={{ fontSize: "0.8em" }} title='Highest & lowest temp'>H: {day.day.maxtemp_c} &deg;C &nbsp;&nbsp; L: {day.day.mintemp_c} &deg;C </span>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </div>
+                        <SuggestedCurrentWeather city={city}/>
+                        <SuggestedFutureWeather city={city}/>
                     </div>
                 );
             })}
