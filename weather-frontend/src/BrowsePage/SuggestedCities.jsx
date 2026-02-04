@@ -27,7 +27,19 @@ export default function SuggestedCities() {
                 }
             }
         );
-        initialImagesArray.push(response.data.results[0].urls.full);
+
+        // pick a crisp but optimized variant. start with `raw` so we can request a width close to our layout size.
+        const srcObj = response.data.results[0].urls;
+        // prefer raw/regular sized image and append params to control width and quality
+        const base = srcObj.raw || srcObj.regular || srcObj.full || srcObj.small;
+        const optimizedUrl = `${base}&w=1600&q=80&auto=format&fit=crop`;
+
+        // kick off async decode (non-blocking) so the browser can prepare the image early
+        const img = new Image();
+        img.src = optimizedUrl;
+        if (img.decode) img.decode().catch(() => {});
+
+        initialImagesArray.push(optimizedUrl);
     }
 
     useEffect(() => {

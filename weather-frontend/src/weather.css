@@ -49,6 +49,7 @@ i {
     align-items: center;
     gap: 10px;
     font-size: 1.5em;
+    font-weight: bold;
     text-shadow: 0 0 10px black;
     margin-top: 20px;
 }
@@ -187,7 +188,7 @@ i {
     border-bottom-left-radius: 10px;
     box-shadow: -1.5px 1.5px 5px black;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: background-color 0.25s ease;
 }
 
 .save-button:hover{
