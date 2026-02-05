@@ -5,8 +5,8 @@ footer {
     color: white;
     font-family: 'Roboto';
     padding: 20px;
-    /*background-color: rgb(13, 113, 200);*/
     background-color: rgba(0, 0, 0, 0.221);
+    margin-top: 20px;
 }
 
 .name-and-copyright {

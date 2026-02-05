@@ -37,6 +37,7 @@
 
 .suggested-container {
     width: 100%;
+    min-height: 575px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
