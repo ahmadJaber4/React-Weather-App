@@ -2,17 +2,18 @@ const { readPlaces, writePlaces } = require('../config/db');
 
 const getAllPlaces = () => readPlaces();
 
-const addPlace = (place) => {
+const addPlace = (placeName) => {
   const places = readPlaces();
-  place.id = Date.now(); // simple unique ID
-  places.push(place);
-  writePlaces(places);
-  return place;
+  if (!places.includes(placeName)) {
+    places.push(placeName);
+    writePlaces(places);
+  }
+  return places;
 };
 
-const deletePlace = (id) => {
+const deletePlace = (placeName) => {
   let places = readPlaces();
-  places = places.filter(p => p.id !== id);
+  places = places.filter(p => p !== placeName);
   writePlaces(places);
   return places;
 };

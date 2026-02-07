@@ -35,7 +35,7 @@
     outline: none;
 }
 
-.suggested-container {
+.browse-container {
     width: 100%;
     min-height: 575px;
     display: flex;
@@ -46,7 +46,7 @@
     margin-top: 40px;
 }
 
-.suggested-text {
+.container-title {
     color: white;
     font-family: 'Roboto';
     margin-bottom: 20px;

@@ -54,6 +54,12 @@ export default function BrowsePage() {
         }
     }
 
+    async function savePlace(cityName){
+        await axios.post('http://localhost:5000/api/places',{
+            name: cityName
+        });
+    }
+
     return (
         <>
             <title>Jaber's Weather Forecast - Browse</title>
@@ -68,9 +74,9 @@ export default function BrowsePage() {
             {searching ?
                 <SearchResultContainer message={loading ? "Loading..." : error ? "No Results" : "Search Results"}>
                     {searchedCityWeather &&
-                        <CityBox city={searchedCityWeather} image={searchedCityImage} />}
+                        <CityBox city={searchedCityWeather} image={searchedCityImage} savePlace={savePlace}/>}
                 </SearchResultContainer>
-                : <SuggestedCities />}
+                : <SuggestedCities savePlace={savePlace}/>}
 
             <Footer />
         </>

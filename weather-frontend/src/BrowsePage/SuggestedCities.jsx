@@ -4,7 +4,7 @@ import { famousCities } from "../famousCities";
 import placeHolderImage from '../assets/image-placeholder.webp';
 import CityBox from '../CityBox';
 
-export default function SuggestedCities() {
+export default function SuggestedCities({savePlace}) {
     const [suggestedCitiesWeather, setSuggestedCitiesWeather] = useState([]);
     const [suggestedCitiesImages, setSuggestedCitiesImages] = useState([]);
 
@@ -85,12 +85,12 @@ export default function SuggestedCities() {
     }, [suggestedCitiesWeather]);
 
     return (
-        <div className="suggested-container">
-            <h3 className="suggested-text">Famous Cities Across The World</h3>
+        <div className="browse-container">
+            <h3 className="container-title">Famous Cities Across The World</h3>
 
             {suggestedCitiesWeather.map((city, index) => {
                 return (
-                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]} />
+                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]} savePlace={savePlace}/>
                 );
             })}
         </div>

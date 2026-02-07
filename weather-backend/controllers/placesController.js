@@ -6,13 +6,17 @@ const getPlaces = (req, res) => {
 };
 
 const savePlace = (req, res) => {
-  const newPlace = Place.addPlace(req.body);
-  res.status(201).json(newPlace);
+  const { name } = req.body;
+  if (!name || typeof name !== 'string') {
+    return res.status(400).json({ error: 'Place name is required and must be a string.' });
+  }
+  const places = Place.addPlace(name);
+  res.status(201).json(places);
 };
 
 const removePlace = (req, res) => {
-  const id = parseInt(req.params.id);
-  const places = Place.deletePlace(id);
+  const name = req.params.name;
+  const places = Place.deletePlace(name);
   res.json(places);
 };
 
