@@ -1,7 +1,7 @@
 import { getUpcomingDaysData } from "./utils";
 
-export default function SuggestedUpcomingDays({city}) {
-    const upcomingDaysData = getUpcomingDaysData(city);
+export default function SuggestedUpcomingDays({cityWeather}) {
+    const upcomingDaysData = getUpcomingDaysData(cityWeather);
 
     return (
         <div className='upcoming-container'>

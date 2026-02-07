@@ -1,11 +1,11 @@
 import CityTodayWeather from "./CityTodayWeather";
 import CityUpcomingDaysWeather from "./CityUpcomingDaysWeather";
 
-export default function SuggestedFutureWeather({city}) {
+export default function SuggestedFutureWeather({cityWeather}) {
     return (
         <div className='future-data'>
-            <CityTodayWeather city={city}/>
-            <CityUpcomingDaysWeather city={city}/>
+            <CityTodayWeather cityWeather={cityWeather}/>
+            <CityUpcomingDaysWeather cityWeather={cityWeather}/>
         </div>
     );
 }

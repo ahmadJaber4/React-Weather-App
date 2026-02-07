@@ -74,7 +74,7 @@ export default function BrowsePage() {
             {searching ?
                 <SearchResultContainer message={loading ? "Loading..." : error ? "No Results" : "Search Results"}>
                     {searchedCityWeather &&
-                        <CityBox city={searchedCityWeather} image={searchedCityImage} savePlace={savePlace}/>}
+                        <CityBox cityWeather={searchedCityWeather} image={searchedCityImage} savePlace={savePlace}/>}
                 </SearchResultContainer>
                 : <SuggestedCities savePlace={savePlace}/>}
 

@@ -1,12 +1,12 @@
 import CityCurrentWeather from "./CityCurrentWeather";
 import CityFutureWeather from "./CityFutureWeather";
 
-export default function CityBox({city, image, savePlace}) {
+export default function CityBox({cityWeather, image, savePlace}) {
     return (
-        <div key={city.location.name} className='city-box' style={{ backgroundImage: `url(${image})` }}>
-            <button className="save-button" onClick={()=>savePlace(city.location.name)}>Save</button>
-            <CityCurrentWeather city={city} />
-            <CityFutureWeather city={city} />
+        <div key={cityWeather.location.name} className='city-box' style={{ backgroundImage: `url(${image})` }}>
+            <button className="save-button" onClick={()=>savePlace(cityWeather.location.name)}>Save</button>
+            <CityCurrentWeather cityWeather={cityWeather} />
+            <CityFutureWeather cityWeather={cityWeather} />
         </div>
     );
 }

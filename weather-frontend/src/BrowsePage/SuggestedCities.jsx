@@ -88,9 +88,9 @@ export default function SuggestedCities({savePlace}) {
         <div className="browse-container">
             <h3 className="container-title">Famous Cities Across The World</h3>
 
-            {suggestedCitiesWeather.map((city, index) => {
+            {suggestedCitiesWeather.map((cityWeather, index) => {
                 return (
-                    <CityBox key={city.location.name} city={city} image={suggestedCitiesImages[index]} savePlace={savePlace}/>
+                    <CityBox key={cityWeather.location.name} cityWeather={cityWeather} image={suggestedCitiesImages[index]} savePlace={savePlace}/>
                 );
             })}
         </div>

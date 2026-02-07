@@ -1,27 +1,38 @@
 import axios from 'axios';
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../MainComponents/Header";
-import { useState } from "react";
+import SavedContainer from './SavedContainer';
 
-export default function SavedPage(){
+export default function SavedPage() {
     const [savedCities, setSavedCities] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    useEffect(()=>{
+    useEffect(() => {
         const loadSavedCities = async () => {
             const response = await axios.get('http://localhost:5000/api/places');
             console.log(response.data);
             setSavedCities(response.data);
         }
-        
-        loadSavedCities();
+
+        try {
+            loadSavedCities();
+        }
+        catch (err){
+            setError(err.message);
+        }
+        finally{
+            setLoading(false);
+        }
+
     }, []);
 
-    return(
+    return (
         <>
             <title>Jaber's Weather Forecast - Saved</title>
 
-            <Header/>
-            <p>Saved</p>
+            <Header />
+            <SavedContainer message={loading?'Loading...':error?'An Error Occured':'Saved Cities'} savedCities={savedCities}/>
         </>
     );
 }

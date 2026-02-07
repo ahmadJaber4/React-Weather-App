@@ -1,7 +1,7 @@
 import { getUpcomingHoursData } from "./utils";
 
-export default function SuggestedToday({city}) {
-    const upcomingHoursData = getUpcomingHoursData(city);
+export default function SuggestedToday({cityWeather}) {
+    const upcomingHoursData = getUpcomingHoursData(cityWeather);
     return (
         <div className='today-container'>
             <p className="today-text">Today</p>
