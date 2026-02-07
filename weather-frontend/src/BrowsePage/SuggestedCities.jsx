@@ -14,8 +14,8 @@ export default function SuggestedCities() {
     let initialWeatherArray = [];
     let initialImagesArray = [];
 
-    async function getCityWeather(lat, lon) {
-        const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${lat},${lon}&days=7`);
+    async function getCityWeather(city) {
+        const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${city}&days=7`);
         initialWeatherArray.push(response.data);
     }
 
@@ -47,7 +47,7 @@ export default function SuggestedCities() {
         (async () => {
             for (const city of famousCities) {
                 try {
-                    await getCityWeather(city.lat, city.lon);
+                    await getCityWeather(city);
                 }
                 catch (error) {
                     setError(error.message);

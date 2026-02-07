@@ -40,7 +40,7 @@ export default function BrowsePage() {
         }
 
         try {
-            const imageResponse = await axios.get(`https://api.unsplash.com/search/photos?query=${searchedCity}&orientation=landscape&per_page=1`,
+            const imageResponse = await axios.get(`https://api.unsplash.com/search/photos?query=${searchedCity} city&orientation=landscape&per_page=1`,
                 {
                     headers: {
                         Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_KEY}`
