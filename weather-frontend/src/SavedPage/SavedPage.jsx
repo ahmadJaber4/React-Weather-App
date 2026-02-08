@@ -10,21 +10,23 @@ export default function SavedPage() {
 
     useEffect(() => {
         const loadSavedCities = async () => {
-            const response = await axios.get('http://localhost:5000/api/places');
-            console.log(response.data);
-            setSavedCities(response.data);
+            setLoading(true);
+            setError(null);
+
+            try {
+                const response = await axios.get('http://localhost:5000/api/places');
+                console.log(response.data);
+                setSavedCities(response.data);
+            }
+            catch (err) {
+                setError(err.message);
+            }
+            finally {
+                setLoading(false);
+            }
         }
 
-        try {
-            loadSavedCities();
-        }
-        catch (err){
-            setError(err.message);
-        }
-        finally{
-            setLoading(false);
-        }
-
+        loadSavedCities();
     }, []);
 
     return (
@@ -32,7 +34,7 @@ export default function SavedPage() {
             <title>Jaber's Weather Forecast - Saved</title>
 
             <Header />
-            <SavedContainer message={loading?'Loading...':error?'An Error Occured':'Saved Cities'} savedCities={savedCities}/>
+            <SavedContainer message={loading ? 'Loading...' : error ? 'An Error Occured' : 'Saved Cities'} savedCities={savedCities} />
         </>
     );
 }

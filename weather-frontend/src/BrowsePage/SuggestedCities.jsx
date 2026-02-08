@@ -44,6 +44,7 @@ export default function SuggestedCities({savePlace}) {
 
     useEffect(() => {
         // IIFE (Immedietly Invoked Function Expression)
+        setLoading(true);
         (async () => {
             for (const city of famousCities) {
                 try {
@@ -52,12 +53,10 @@ export default function SuggestedCities({savePlace}) {
                 catch (error) {
                     setError(error.message);
                 }
-                finally {
-                    setLoading(false);
-                }
             }
 
             console.log(initialWeatherArray);
+            setLoading(false);
             setSuggestedCitiesWeather(initialWeatherArray);
         })();
     }, []);
@@ -86,13 +85,15 @@ export default function SuggestedCities({savePlace}) {
 
     return (
         <div className="browse-container">
-            <h3 className="container-title">Famous Cities Across The World</h3>
-
-            {suggestedCitiesWeather.map((cityWeather, index) => {
-                return (
-                    <CityBox key={cityWeather.location.name} cityWeather={cityWeather} image={suggestedCitiesImages[index]} savePlace={savePlace}/>
-                );
-            })}
+            <h3 className="container-title">{loading?'Loading...':error?'An Error Occurred':'Famous Cities Across The World'}</h3>
+            {suggestedCitiesWeather.map((cityWeather, index) => (
+                <CityBox
+                    key={cityWeather.location.name}
+                    cityWeather={cityWeather}
+                    image={suggestedCitiesImages[index]}
+                    savePlace={savePlace}
+                />
+            ))}
         </div>
     );
 }
