@@ -4,7 +4,7 @@ import { famousCities } from "../famousCities";
 import placeHolderImage from '../assets/image-placeholder.webp';
 import CityBox from '../CityBox';
 
-export default function SuggestedCities({savePlace}) {
+export default function SuggestedCities({handleSave, savedCities}) {
     const [suggestedCitiesWeather, setSuggestedCitiesWeather] = useState([]);
     const [suggestedCitiesImages, setSuggestedCitiesImages] = useState([]);
 
@@ -91,7 +91,8 @@ export default function SuggestedCities({savePlace}) {
                     key={cityWeather.location.name}
                     cityWeather={cityWeather}
                     image={suggestedCitiesImages[index]}
-                    savePlace={savePlace}
+                    handleSave={handleSave}
+                    saved={savedCities.includes(cityWeather.location.name)}
                 />
             ))}
         </div>

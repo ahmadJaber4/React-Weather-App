@@ -9,7 +9,7 @@ import '../weather.css';
 import CityBox from '../CityBox';
 import placeHolderImage from '../assets/image-placeholder.webp';
 
-export default function BrowsePage() {
+export default function BrowsePage({savedCities, handleSave}) {
     const [searchedCityWeather, setSearchedCityWeather] = useState();
     const [searchedCityImage, setSearchedCityImage] = useState();
     const [searching, setSearching] = useState(false);
@@ -54,12 +54,6 @@ export default function BrowsePage() {
         }
     }
 
-    async function savePlace(cityName){
-        await axios.post('http://localhost:5000/api/places',{
-            name: cityName
-        });
-    }
-
     return (
         <>
             <title>Jaber's Weather Forecast - Browse</title>
@@ -74,9 +68,9 @@ export default function BrowsePage() {
             {searching ?
                 <SearchResultContainer message={loading ? "Loading..." : error ? "No Results" : "Search Results"}>
                     {searchedCityWeather &&
-                        <CityBox cityWeather={searchedCityWeather} image={searchedCityImage} savePlace={savePlace}/>}
+                        <CityBox cityWeather={searchedCityWeather} image={searchedCityImage} handleSave={handleSave} saved={savedCities.includes(searchedCityWeather.location.name)}/>}
                 </SearchResultContainer>
-                : <SuggestedCities savePlace={savePlace}/>}
+                : <SuggestedCities handleSave={handleSave} savedCities={savedCities}/>}
 
             <Footer />
         </>

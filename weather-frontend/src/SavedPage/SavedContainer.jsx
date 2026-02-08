@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CityBox from '../CityBox';
 
-export default function SavedContainer({ message, savedCities }) {
+export default function SavedContainer({ message, savedCities, handleSave }) {
     const [cityData, setCityData] = useState([]);
 
     useEffect(() => {
@@ -47,6 +47,8 @@ export default function SavedContainer({ message, savedCities }) {
                     key={city}
                     cityWeather={weather}
                     image={image}
+                    handleSave={handleSave}
+                    saved={true}
                 />
             ))}
         </div>

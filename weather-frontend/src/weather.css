@@ -192,7 +192,15 @@ i {
 }
 
 .save-button:hover{
-    background: rgb(16, 97, 167);
+    background-color: rgb(16, 97, 167);
+}
+
+.unsave{
+    background-color: rgb(237, 133, 133);
+}
+
+.unsave:hover{
+    background-color: rgb(218, 104, 104);
 }
 
 /* Width */
