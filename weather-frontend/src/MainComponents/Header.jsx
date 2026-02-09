@@ -1,11 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/weather-icon.webp'
 import './Header.css';
 
-export default function Header({savedCities}){
+export default function Header({ savedCities }) {
+    const navigate = useNavigate()
+
     return (
         <header className='header'>
-            <div className='header-logo-and-title'>
+            <div className='header-logo-and-title' onClick={()=>navigate('/')}>
                 <img className="logo" src={logo} alt="logo" />
                 <span className="title">Jaber's Weather Forecast</span>
             </div>
