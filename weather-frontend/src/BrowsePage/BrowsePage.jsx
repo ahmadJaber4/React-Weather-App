@@ -19,6 +19,15 @@ export default function BrowsePage({savedCities, handleSave}) {
 
     const searchRef = useRef();
 
+    function handleInputChange(e) {
+        if (e.target.value.trim() === "") {
+            setSearching(false);
+            setSearchedCityWeather();
+            setSearchedCityImage();
+            setError(null);
+        }
+    }
+
     async function searchCity() {
         setSearching(true);
         setSearchedCityWeather(null);
@@ -62,7 +71,13 @@ export default function BrowsePage({savedCities, handleSave}) {
 
             <div className="search-bar">
                 <span className="search-icon" onClick={searchCity}><i className="fa-solid fa-magnifying-glass fa-lg" style={{ color: "white" }}></i></span>
-                <input ref={searchRef} type="text" placeholder="Search a city" className="search-input" />
+                <input
+                    ref={searchRef}
+                    type="text"
+                    placeholder="Search a city"
+                    className="search-input"
+                    onChange={handleInputChange}
+                />
             </div>
 
             {searching ?
@@ -70,7 +85,8 @@ export default function BrowsePage({savedCities, handleSave}) {
                     {searchedCityWeather &&
                         <CityBox cityWeather={searchedCityWeather} image={searchedCityImage} handleSave={handleSave} saved={savedCities.includes(searchedCityWeather.location.name)}/>}
                 </SearchResultContainer>
-                : <SuggestedCities handleSave={handleSave} savedCities={savedCities}/>}
+                : 
+                <SuggestedCities handleSave={handleSave} savedCities={savedCities}/>}
 
             <Footer />
         </>
