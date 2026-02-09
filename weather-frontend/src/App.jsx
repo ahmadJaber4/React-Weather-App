@@ -16,7 +16,6 @@ function App() {
 
     try {
       const response = await axios.get('http://localhost:5000/api/places');
-      console.log(response.data);
       setSavedCities(response.data);
     }
     catch (err) {
@@ -28,7 +27,6 @@ function App() {
   }
 
   async function handleSave(cityName) {
-    console.log(cityName);
     if (!savedCities.includes(cityName)) {
       try {
         await axios.post('http://localhost:5000/api/places', {
@@ -58,7 +56,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route index element={<HomePage savedCities={savedCities}/>} />
         <Route path="/browse" element={<BrowsePage savedCities={savedCities} handleSave={handleSave} />} />
         <Route path="/saved" element={<SavedPage savedCities={savedCities} loadSavedCities={loadSavedCities} handleSave={handleSave} loading={loading} error={error} />} />
       </Routes>

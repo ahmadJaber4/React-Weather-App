@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/weather-icon.webp'
 import './Header.css';
 
-export default function Header(){
+export default function Header({savedCities}){
     return (
         <header className='header'>
             <div className='header-logo-and-title'>
@@ -13,7 +13,7 @@ export default function Header(){
             <div className='tabs'>
                 <NavLink to='/' className='tab'>Home</NavLink>
                 <NavLink to='/browse' className='tab'>Browse</NavLink>
-                <NavLink to='/saved' className='tab'>Saved</NavLink>
+                <NavLink to='/saved' className='tab'>Saved {`(${savedCities.length})`}</NavLink>
             </div>
         </header>
     );

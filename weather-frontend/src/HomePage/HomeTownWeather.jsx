@@ -32,31 +32,32 @@ export default function HomeTownWeather() {
     }
 
     useEffect(() => {
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                async (position) => {
-                    setRequestingLocation(false);
-                    const { latitude, longitude } = position.coords;
-                    try {
-                        await getLocation(latitude, longitude);
-                    }
-                    catch (err) {
-                        setError(err.message);
-                    }
-                    finally {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    async (position) => {
+                        setRequestingLocation(false);
+                        const { latitude, longitude } = position.coords;
+                        console.log(latitude, longitude);
+                        try {
+                            await getLocation(latitude, longitude);
+                        }
+                        catch (err) {
+                            setError(err.message);
+                        }
+                        finally {
+                            setLoading(false);
+                        }
+                    },
+                    (error) => {
+                        console.error("Error getting location:", error);
+                        setRequestingLocation(false);
+                        setError(error.message);
                         setLoading(false);
-                    }
-                },
-                (error) => {
-                    console.error("Error getting location:", error);
-                    setRequestingLocation(false);
-                    setError(error.message);
-                    setLoading(false);
-                }
-            );
-        } else {
-            alert("Geolocation is not supported by your browser.");
-        }
+                    },
+                );
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
     }, []);
 
     useEffect(() => {

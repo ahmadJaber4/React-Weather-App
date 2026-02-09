@@ -32,10 +32,8 @@ export default function SavedContainer({ message, savedCities, handleSave }) {
 
             setCityData(results);
         }
-
-        if (savedCities?.length) {
-            fetchCities();
-        }
+        
+        fetchCities();
     }, [savedCities]);
 
     return (

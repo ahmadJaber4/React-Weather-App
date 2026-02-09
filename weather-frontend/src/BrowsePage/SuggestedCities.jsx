@@ -54,8 +54,7 @@ export default function SuggestedCities({handleSave, savedCities}) {
                     setError(error.message);
                 }
             }
-
-            console.log(initialWeatherArray);
+            
             setLoading(false);
             setSuggestedCitiesWeather(initialWeatherArray);
         })();
@@ -77,7 +76,6 @@ export default function SuggestedCities({handleSave, savedCities}) {
                     }
                 }
 
-                console.log(initialImagesArray);
                 setSuggestedCitiesImages(initialImagesArray);
             })();
         }

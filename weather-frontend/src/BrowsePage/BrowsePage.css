@@ -37,7 +37,7 @@
 
 .browse-container {
     width: 100%;
-    min-height: 575px;
+    min-height: 545px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

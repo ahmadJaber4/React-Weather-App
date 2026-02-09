@@ -7,7 +7,7 @@ export default function SavedPage({savedCities, handleSave, loading, error}) {
         <>
             <title>Jaber's Weather Forecast - Saved</title>
 
-            <Header />
+            <Header savedCities={savedCities}/>
             <SavedContainer message={loading ? 'Loading...' : error ? 'An Error Occured' : 'Saved Cities'} savedCities={savedCities} handleSave={handleSave} />
             <Footer/>
         </>

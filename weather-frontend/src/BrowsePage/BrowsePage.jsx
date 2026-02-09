@@ -58,7 +58,7 @@ export default function BrowsePage({savedCities, handleSave}) {
         <>
             <title>Jaber's Weather Forecast - Browse</title>
 
-            <Header />
+            <Header savedCities={savedCities}/>
 
             <div className="search-bar">
                 <span className="search-icon" onClick={searchCity}><i className="fa-solid fa-magnifying-glass fa-lg" style={{ color: "white" }}></i></span>
