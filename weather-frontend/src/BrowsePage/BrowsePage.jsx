@@ -19,6 +19,12 @@ export default function BrowsePage({savedCities, handleSave}) {
 
     const searchRef = useRef();
 
+    function handleInputKeyDown(e) {
+        if (e.key === "Enter") {
+            searchCity();
+        }
+    }
+
     function handleInputChange(e) {
         if (e.target.value.trim() === "") {
             setSearching(false);
@@ -77,6 +83,7 @@ export default function BrowsePage({savedCities, handleSave}) {
                     placeholder="Search a city"
                     className="search-input"
                     onChange={handleInputChange}
+                    onKeyDown={handleInputKeyDown}
                 />
             </div>
 

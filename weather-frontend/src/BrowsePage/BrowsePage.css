@@ -11,12 +11,13 @@
     margin-top: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .search-icon {
     padding-top: 3px;
+    cursor: pointer;
 }
 
 .search-input {
@@ -24,8 +25,8 @@
     border-left: 1px solid;
     height: 27px;
     flex: 1;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     font-family: "Roboto";
     font-size: 1.05em;
     padding-left: 5px;

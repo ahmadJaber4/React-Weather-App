@@ -28,7 +28,8 @@ i {
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.6),
         0 8px 12px rgba(0, 0, 0, 0.4);
-    border-top-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 1000px;
     height: 360px;
     width: 85%;
@@ -185,7 +186,8 @@ i {
     background-color: rgb(13, 113, 200);
     color: white;
     border: none;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
     box-shadow: -1.5px 1.5px 5px black;
     cursor: pointer;
     transition: background-color 0.25s ease;
