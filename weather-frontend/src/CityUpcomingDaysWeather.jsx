@@ -11,7 +11,7 @@ export default function SuggestedUpcomingDays({cityWeather}) {
                     return (
                         <div key={day.date} className="day-data">
                             <span style={{ fontWeight: "600" }}>{day.date}</span>
-                            <img src={day.day.condition.icon} alt="" />
+                            <img src={day.day.condition.icon} alt="" className="weather-icon"/>
                             <span style={{ fontSize: "0.8em" }} title='Highest & lowest temp'>H: {day.day.maxtemp_c} &deg;C &nbsp;&nbsp; L: {day.day.mintemp_c} &deg;C </span>
                         </div>
                     )

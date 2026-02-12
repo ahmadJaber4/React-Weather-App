@@ -30,14 +30,14 @@ i {
         0 8px 12px rgba(0, 0, 0, 0.4);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    width: 1000px;
-    height: 360px;
+    height: 375px;
     width: 85%;
     margin-bottom: 25px;
     border: 1px solid black;
 }
 
 .name-and-current {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,17 +45,17 @@ i {
     gap: 20px;
 }
 
-.city-country {
+.city-box .city-country {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.7em;
+    font-weight: 100;
     text-shadow: 0 0 10px black;
     margin-top: 20px;
 }
 
-.current-weather {
+.city-box .current-weather {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +64,8 @@ i {
     opacity: 0.9;
     background-color: rgba(22, 22, 22, 0.734);
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px 5px;
+    width: 40%;
 }
 
 .future-data {
@@ -79,8 +80,8 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 45%;
     overflow: hidden;
+    width: 45%;
 }
 
 .today-text {
@@ -100,7 +101,6 @@ i {
     border-top-right-radius: 10px;
     opacity: 0.9;
     overflow-x: auto;
-    width: 97%;
 }
 
 .hour-data {
@@ -158,26 +158,25 @@ i {
     flex-shrink: 0;
 }
 
-.sunrise-sunset {
-    display: flex;
-    gap: 15px;
-    opacity: 0.8;
-}
-
-.sunrise,
-.sunset {
+.cities-container {
+    width: 100%;
+    min-height: 545px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    font-size: 0.75em;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.sunrise-sunset img {
-    width: 25px;
+.container-title {
+    color: white;
+    font-family: 'Roboto';
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
-.save-button{
+.save-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -193,15 +192,15 @@ i {
     transition: background-color 0.25s ease;
 }
 
-.save-button:hover{
+.save-button:hover {
     background-color: rgb(16, 97, 167);
 }
 
-.unsave{
+.unsave {
     background-color: rgb(237, 133, 133);
 }
 
-.unsave:hover{
+.unsave:hover {
     background-color: rgb(218, 104, 104);
 }
 
@@ -229,4 +228,102 @@ i {
 .upcoming-hours-data::-webkit-scrollbar-thumb:hover,
 .upcoming-days-data::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media (max-width: 1024px) {
+    .city-box .current-weather {
+        gap: 20px;
+        padding: 2px 5px;
+        font-size: 0.9em;
+        width: 65%;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-title {
+        font-size: 1.2em;
+    }
+
+    .city-box {
+        height: 450px;
+        width: 90%;
+        margin-bottom: 25px;
+        border: 1px solid black;
+    }
+
+    .city-box .name-and-current {
+        gap: 15px;
+    }
+
+    .city-box .city-country {
+        gap: 10px;
+        font-size: 1.1em;
+        margin-top: 30px;
+    }
+
+    .city-box .current-weather {
+        gap: 15px;
+        padding-top: 5px;
+        font-size: 0.6em;
+        width: 90%;
+        border-radius: 10px;
+    }
+
+    .state-icon {
+        width: 30px;
+    }
+
+    .city-box .future-data {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .city-box .weather-icon{
+        width: 45px;
+    }
+
+    .city-box .today-container {
+        width: 100%;
+    }
+
+    .city-box .today-text {
+        font-size: 0.8em;
+    }
+
+    .city-box .upcoming-hours-data {
+        gap: 10px;
+        font-size: 0.6em;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .city-box .hour-data {
+        gap: 7px;
+    }
+
+    .city-box .upcoming-container {
+        width: 100%;
+    }
+
+    .city-box .upcoming-days-text {
+        font-size: 0.9em;
+    }
+
+    .city-box .upcoming-days-data {
+        gap: 15px;
+        font-size: 0.8em;
+        border-top-left-radius: 0px;
+    }
+
+    .city-box .day-data {
+        gap: 7px;
+    }
+
+    .save-button {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
 }

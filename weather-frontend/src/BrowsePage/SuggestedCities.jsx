@@ -82,7 +82,7 @@ export default function SuggestedCities({handleSave, savedCities}) {
     }, [suggestedCitiesWeather]);
 
     return (
-        <div className="browse-container">
+        <div className="cities-container">
             <h3 className="container-title">{loading?'Loading...':error?'An Error Occurred':'Famous Cities Across The World'}</h3>
             {suggestedCitiesWeather.map((cityWeather, index) => (
                 <CityBox

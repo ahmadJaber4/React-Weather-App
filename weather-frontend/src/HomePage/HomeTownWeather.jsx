@@ -21,7 +21,7 @@ export default function HomeTownWeather() {
     }
 
     async function getImage(city) {
-        const response = await axios.get(`https://api.unsplash.com/search/photos?query=${city}&orientation=landscape&per_page=1`,
+        const response = await axios.get(`https://api.unsplash.com/search/photos?query=Amman&orientation=landscape&per_page=1`,
             {
                 headers: {
                     Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_KEY}`

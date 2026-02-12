@@ -35,21 +35,3 @@
 .search-input:focus {
     outline: none;
 }
-
-.browse-container {
-    width: 100%;
-    min-height: 545px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.container-title {
-    color: white;
-    font-family: 'Roboto';
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}

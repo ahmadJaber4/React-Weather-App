@@ -10,7 +10,7 @@ export default function SuggestedToday({cityWeather}) {
                     return (
                         <div key={hour.time} className="hour-data">
                             <span style={{ fontWeight: "600" }}>{(hour.time).slice(-5)}</span>
-                            <img src={hour.condition.icon} alt="" />
+                            <img src={hour.condition.icon} alt="" className="weather-icon"/>
                             <span title='Temperature'>{hour.temp_c} &deg;C</span>
                         </div>
                     )
