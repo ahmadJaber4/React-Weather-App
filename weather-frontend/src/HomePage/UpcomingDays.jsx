@@ -1,3 +1,5 @@
+// upcoming days component, displays the upcoming days' forecast of the hometown
+
 import { useContext } from 'react';
 import { LocalWeatherCtx } from "./HomeTownWeather";
 import { getUpcomingDaysData } from '../utils';
@@ -5,12 +7,14 @@ import sunsetIcon from '../assets/sunset.png';
 import sunriseIcon from '../assets/sunrise.png';
 
 export default function UpcomingDays() {
-    const homeTownWeather = useContext(LocalWeatherCtx);
-    let upcomingDaysData = getUpcomingDaysData(homeTownWeather);
+    const homeTownWeather = useContext(LocalWeatherCtx); // store the context value (homeTownWeather) passed from HomeTownWeather.jsx
+    const upcomingDaysData = getUpcomingDaysData(homeTownWeather); // store the upcoming days' (6) weather conditions using the function 
 
     return (
         <div className="upcoming-container">
             <p className="upcoming-days-text">6-Day Forecast</p>
+
+            {/* display the next 6 days' conditions (date, icon, highest and lowest temp, sunrise and sunset) */}
             <div className="upcoming-days-data">
                 {upcomingDaysData.map((day) => {
                     return (

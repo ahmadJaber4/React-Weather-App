@@ -1,3 +1,5 @@
+/* styles for elements in the home page (page-specific) */
+
 .home-town-container {
     height: 650px;
     display: flex;
@@ -89,8 +91,8 @@
     font-family: 'Roboto';
     color: white;
     background-color: rgb(13, 113, 200);
-    width: 350px;
-    height: 280px;
+    width: 370px;
+    height: 290px;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 10px;

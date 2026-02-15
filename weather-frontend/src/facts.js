@@ -1,3 +1,5 @@
+// 100 weather facts, one of them is displayed in a brief box in the home page 
+
 export const weatherFacts = [
   "Did you know the highest temperature ever recorded on Earth was 134°F (56.7°C) in Death Valley, USA?",
   "Lightning strikes about 100 times every second around the world.",

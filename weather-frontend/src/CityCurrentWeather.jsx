@@ -1,6 +1,8 @@
+// city current weather component, displays the current forecast of the city
 
-export default function SuggestedCurrentWeather({cityWeather}) {
+export default function CityCurrentWeather({cityWeather}) {
     return (
+        // current weather (name, text, temp, wind speed, humidity)
         <div className='name-and-current'>
             <div className='city-country'>{cityWeather.location.name}, {cityWeather.location.country}</div>
             <div className='current-weather'>

@@ -1,3 +1,5 @@
+/* styles for elements in the browse page (page-specific) */
+
 .search-bar {
     display: flex;
     justify-content: flex-start;
@@ -23,7 +25,7 @@
 .search-input {
     border: none;
     border-left: 1px solid;
-    height: 27px;
+    height: 28px;
     flex: 1;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -34,4 +36,10 @@
 
 .search-input:focus {
     outline: none;
+}
+
+@media (max-width: 600px){
+    .search-input{
+        height: 20px;
+    }
 }

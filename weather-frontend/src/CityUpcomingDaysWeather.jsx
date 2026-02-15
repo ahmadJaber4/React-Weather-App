@@ -1,11 +1,15 @@
+// upcoming days weather, displays weather data for the upcoming 6 days
+
 import { getUpcomingDaysData } from "./utils";
 
-export default function SuggestedUpcomingDays({cityWeather}) {
-    const upcomingDaysData = getUpcomingDaysData(cityWeather);
+export default function CityUpcomingDays({cityWeather}) {
+    const upcomingDaysData = getUpcomingDaysData(cityWeather); // store upcoming 6 days data using the function
 
     return (
         <div className='upcoming-container'>
             <p className="upcoming-days-text">6-Day Forecast</p>
+
+            {/* display the 6 days forecast (date, icon, highest and lowest temp) */}
             <div className="upcoming-days-data">
                 {upcomingDaysData.map((day) => {
                     return (

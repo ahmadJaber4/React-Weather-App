@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { weatherFacts } from '../facts.js'
-import BriefBox from "./BriefBox";
+// website brief component, a container that holds boxes, each one displays a feature of the website
 
+import { Link } from "react-router-dom";
+import BriefBox from "./BriefBox";
+import { weatherFacts } from '../facts.js'
 
 export default function WebsiteBrief() {
     return (

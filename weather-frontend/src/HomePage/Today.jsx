@@ -1,14 +1,18 @@
+// the today component, displays today's upcoming hourly forecast of the hometown 
+
 import { useContext } from "react";
 import { LocalWeatherCtx } from "./HomeTownWeather";
 import { getUpcomingHoursData } from "../utils";
 
 export default function Today() {
-    const homeTownWeather = useContext(LocalWeatherCtx);
-    const upcomingHoursData = getUpcomingHoursData(homeTownWeather);
+    const homeTownWeather = useContext(LocalWeatherCtx); // store the context value (homeTownWeather) passed from HomeTownWeather.jsx
+    const upcomingHoursData = getUpcomingHoursData(homeTownWeather); // store the upcoming hours' weather data using the function
 
     return (
         <div className="today-container">
             <p className="today-text">Today</p>
+
+            {/* display upcoming hours conditions (time, icon, temp, wind, humidity) */}
             <div className="upcoming-hours-data">
                 {upcomingHoursData.map((hour) => {
                     return (

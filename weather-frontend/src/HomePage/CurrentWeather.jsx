@@ -1,11 +1,14 @@
+// current weather component, containing the hometown's current weather conditions
+
 import { useContext } from "react";
 import { LocalWeatherCtx } from "./HomeTownWeather";
 
 export default function CurrentWeather() {
-    const homeTownWeather = useContext(LocalWeatherCtx);
+    const homeTownWeather = useContext(LocalWeatherCtx); // store the context value (homeTownWeather) passed from HomeTownWeather.jsx 
 
     return (
         <div className="name-and-current-data">
+            {/* city and country name */}
             <div className="city-country">
                 <i className="fa-solid fa-location-dot fa-xl"></i>
                 <div>
@@ -13,6 +16,7 @@ export default function CurrentWeather() {
                 </div>
             </div>
 
+            {/* current weather conditions (text, temp, wind, humidity) */}
             <div className="current-weather">
                 <div className="info">
                     <img className="state-icon" src={homeTownWeather.current.condition.icon} alt="" />
