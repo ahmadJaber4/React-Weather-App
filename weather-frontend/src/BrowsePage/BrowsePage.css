@@ -40,6 +40,9 @@
 
 @media (max-width: 600px){
     .search-input{
-        height: 20px;
+        height: 21px;
+        border: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 }

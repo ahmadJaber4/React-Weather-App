@@ -11,7 +11,7 @@ export default function Header({ savedCities }) { // savedCities prop passed to 
         <header className='header'>
             <div className='header-logo-and-title' onClick={()=>navigate('/')}> {/* navigate to the home page when the title/icon is clicked */}
                 <img className="logo" src={logo} alt="logo" />
-                <span className="title">Jaber's Weather Forecast</span>
+                <span className="title">Weather Forecast</span>
             </div>
 
             {/* linking tabs to the corresponding page */}
