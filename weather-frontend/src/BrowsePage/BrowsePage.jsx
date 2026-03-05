@@ -52,10 +52,10 @@ export default function BrowsePage({ savedCities, handleSave }) {
 
         const inputValue = searchRef.current.value.trim(); // store the search input (trimmed)
         const searchedCity = inputValue.charAt(0).toUpperCase() + inputValue.slice(1); // make the 1st letter capital
-
+        let weatherResponse;
         // fetch weather data for the searched city and store it in the state
         try {
-            const weatherResponse = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${searchedCity}&days=7`);
+            weatherResponse = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${searchedCity}&days=7`);
             setSearchedCityWeather(weatherResponse.data);
         }
         catch (err) {
@@ -67,7 +67,8 @@ export default function BrowsePage({ savedCities, handleSave }) {
 
         // fetch image for the searched city and store it in the state
         try {
-            const imageResponse = await axios.get(`https://api.unsplash.com/search/photos?query=${searchedCity}&orientation=landscape&per_page=1`,
+            const fetchedLocation = weatherResponse.data.location;
+            const imageResponse = await axios.get(`https://api.unsplash.com/search/photos?query=${`${fetchedLocation.name}, ${fetchedLocation.country}`}&orientation=landscape&per_page=1`,
                 {
                     headers: {
                         Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_KEY}`

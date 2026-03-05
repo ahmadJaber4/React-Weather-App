@@ -28,16 +28,20 @@
 
 .tabs{
     display: flex;
+    align-items: center;
     gap: 25px;
     justify-self: center;
     font-weight: 500;
+    height: 100%
 }
 
 .tab{
+    display: flex;
+    align-items: center;
     cursor: pointer;
     color: white;
     text-decoration: none;
-
+    height: 100%;
 }
 
 .tab:hover{
