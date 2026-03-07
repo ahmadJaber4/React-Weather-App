@@ -14,4 +14,9 @@ app.use('/api/places', placesRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
+app.get("/", (req, res) => {
+  res.send("Weather API is running 🚀");
+});
+
 });
