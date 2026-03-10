@@ -85,7 +85,7 @@ export default function BrowsePage({ savedCities, handleSave }) {
 
     return (
         <>
-            <title>Jaber's Weather Forecast - Browse</title>
+            <title>Weather Forecast - Browse</title>
 
             <Header savedCities={savedCities} />
 

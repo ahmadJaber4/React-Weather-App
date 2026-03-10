@@ -9,7 +9,7 @@ import '../weather.css';
 export default function HomePage({savedCities}) {
     return (
         <>
-            <title>Jaber's Weather Forecast - Home</title>
+            <title>Weather Forecast - Home</title>
 
             <Header savedCities={savedCities}/>
             <HomeTownWeather/>

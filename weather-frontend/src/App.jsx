@@ -5,6 +5,8 @@ import HomePage from './HomePage/HomePage'
 import BrowsePage from './BrowsePage/BrowsePage'
 import SavedPage from './SavedPage/SavedPage'
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function App() {
 
   // state for the saved cities array incl. loading and error states for fetching
@@ -19,7 +21,7 @@ function App() {
 
     // get saved cities from /api/places and store it in the saved cities state
     try {
-      const response = await axios.get('http://localhost:5000/api/places');
+      const response = await axios.get(`${API_URL}/api/places`);
       setSavedCities(response.data);
     }
     catch (err) {
@@ -35,7 +37,7 @@ function App() {
     // save/unsave is clicked, check if the city isn't already saved (save it with POST), or if it's saved (unsave it with DELETE) 
     if (!savedCities.includes(cityName)) {
       try {
-        await axios.post('http://localhost:5000/api/places', {
+        await axios.post(`${API_URL}/api/places`, {
           name: cityName
         });
       }
@@ -45,7 +47,7 @@ function App() {
     }
     else{
       try{
-        await axios.delete(`http://localhost:5000/api/places/${cityName}`);
+        await axios.delete(`${API_URL}/api/places/${cityName}`);
       }
       catch (err){
         console.log(err);
