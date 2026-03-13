@@ -8,7 +8,7 @@ export default function Footer() {
             <div className='name-and-copyright'>
                 <h4>Programmed by</h4>
                 <h2>Ahmad Marwan Jaber</h2>
-                <i className="fa-brands fa-linkedin fa-xl"></i>
+                <a href="https://www.linkedin.com/in/ahmad-jaber-b9a9353a8/" target='_blank'><i className="fa-brands fa-linkedin fa-xl"></i></a>
                 <span className='copyright'>&copy; 2026 - All rights reserved</span>
             </div>
 

@@ -80,6 +80,8 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
 }
 
 .brief-box {
@@ -91,10 +93,10 @@
     font-family: 'Roboto';
     color: white;
     background-color: rgb(13, 113, 200);
-    width: 300px;
-    height: 330px;
+    height: 280px;
+    width: 340px;
     padding: 20px;
-    margin-bottom: 30px;
+    margin: 25px;
     border-radius: 10px;
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.6),
