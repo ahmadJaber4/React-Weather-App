@@ -93,7 +93,6 @@
     font-family: 'Roboto';
     color: white;
     background-color: rgb(13, 113, 200);
-    height: 280px;
     width: 340px;
     padding: 20px;
     margin: 25px;
@@ -119,6 +118,7 @@
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 1.3em;
+    text-align: center;
 }
 
 .brief-description {
@@ -230,6 +230,5 @@
     .brief-box {
         width: 80%;
         font-size: 0.9em;
-        height: 250px;
     }
 }
